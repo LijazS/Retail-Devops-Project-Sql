@@ -20,4 +20,4 @@ spec:
               replacePrefixMatch: /
       backendRefs:
         - name: capsule-service
-          port: 81
+          port: 80
