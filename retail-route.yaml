@@ -8,10 +8,26 @@ spec:
     - name: new-gateway
       namespace: l-ns
   rules:
+    # Rule 1 → /retail
     - matches:
         - path:
             type: PathPrefix
-            value: /retail            
+            value: /retail
+      filters:
+        - type: URLRewrite
+          urlRewrite:
+            path:
+              type: ReplacePrefixMatch
+              replacePrefixMatch: /
+      backendRefs:
+        - name: capsule-service
+          port: 80
+
+    # Rule 2 → /register
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /register
       filters:
         - type: URLRewrite
           urlRewrite:
