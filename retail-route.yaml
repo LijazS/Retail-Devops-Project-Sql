@@ -39,3 +39,11 @@
         backendRefs:
           - name: capsule-service
             port: 80
+
+      - matches:
+          - path:
+              type: PathPrefix
+              value: /index
+        backendRefs:
+          - name: capsule-service
+            port: 80
