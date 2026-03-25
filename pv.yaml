@@ -1,0 +1,13 @@
+apiVerison: v1
+kind: PersistentVolume
+metadata:
+  name: retail-pv
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+  - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    path: /data/my-storage
+    server: 10.0.1.169
