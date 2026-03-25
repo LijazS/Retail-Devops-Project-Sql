@@ -5,7 +5,7 @@ metadata:
 spec:
   accessModes:
   - ReadWriteMany
-  StorageClassName: fitness-sc
+  storageClassName: fitness-sc
   resources:
     requests:
       storage: 2Gi
