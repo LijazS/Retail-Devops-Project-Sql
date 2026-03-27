@@ -5,6 +5,6 @@ metadata:
 provisioner: nfs.csi.k8s.io
 parameters:
   server: 10.0.1.169
-  share: /data/my-storage/test
+  share: /data/my-storage
 reclaimPolicy: Delete
 volumeBindingMode: Immediate
